@@ -1,7 +1,33 @@
-ul{
-    display: flex;
-   
-}
 li{
     list-style: none;
+    margin: 20px;
+    font-weight: bold;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.main{
+    max-width: 1000px;
+    margin: 60px auto;
+}
+h2{
+    text-align: center;
+    font-weight: bold;
+}
+.title{
+    text-align: center;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+}
+.foot button{
+    color: white;
+    background-color: rgb(27, 77, 77);
+    border: none;
+    font-size: medium;
 }
