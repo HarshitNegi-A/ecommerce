@@ -3,7 +3,7 @@ li{
     margin: 20px;
     font-weight: bold;
 }
-ul{
+.list{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

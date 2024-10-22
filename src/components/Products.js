@@ -91,13 +91,14 @@ const Product=()=>{
     const products=(
         <div className={classes.main}>
             <h2>Main</h2>
-        <ul>
+        <ul className={classes.list}>
             {productsArr.map((product)=>(
                 <li><div className={classes.title}>{product.title}</div><br/>  <div><img alt="photo" src={product.imageUrl}></img></div><br/> <div className={classes.foot}>${product.price} <button>Add To Cart</button></div>
                 </li>
                 
             ))}
         </ul>
+        <button >See the cart</button>
         </div>
     )
     return <React.Fragment>

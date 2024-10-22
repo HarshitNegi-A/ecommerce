@@ -1,7 +1,7 @@
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 
 const Header=()=>{
-    return <Navbar bg="dark" variant="dark" expand="lg">
+    return <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
         <Container>
             <Nav className="me-auto">
             <Nav.Link href="/">HOME</Nav.Link>

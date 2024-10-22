@@ -1,0 +1,46 @@
+.logo{
+    width: 80px;
+    border-radius: 5px;
+    
+}
+.items{
+    display: flex;
+    align-items: center;
+}
+.list{
+    margin: 0;
+    padding: 0;
+}
+.title{
+    color: black;
+    font-size: medium;
+    margin-right: 40px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    
+    
+}
+.title div{
+    color: black;
+    font-size: large;
+    width: 50px;
+}
+.price{
+    color: black;
+    font-size: medium;
+    margin-right: 40px;
+    max-width: 100px;
+    width: 60px;
+}
+  
+.quantity{
+    display: flex;
+    
+}
+.quantity button {
+    border: none;
+    background-color: rgb(192, 69, 69);
+    border-radius: 5px;
+    margin-left: 5px;
+}
