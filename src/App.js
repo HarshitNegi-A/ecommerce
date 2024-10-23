@@ -4,6 +4,7 @@ import Title from "./components/Title";
 import Product from "./components/Products";
 import Footer from "./components/Footer";
 import Cart from "./components/Cart";
+import CartProvider from "./store/CartProvider";
 
 
 
@@ -19,14 +20,14 @@ function App() {
   }
 
 
-  return ( <React.Fragment>
+  return ( <CartProvider>
     {isCartShown && <Cart onClose={handleOnClose}/>}
   <Header onClick={handleOnClick}/>
   <Title/>
   <Product onClick={handleOnClick}/>
   <Footer />
   
-  </React.Fragment>
+  </CartProvider>
   
       
     

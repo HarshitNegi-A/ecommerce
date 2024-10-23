@@ -13,6 +13,7 @@ const Cart=(props)=>{
        </div>
        <hr/>
        <CartItems />
+       <div className={classes.total}>Total $0</div>
     </div>
 }
 
