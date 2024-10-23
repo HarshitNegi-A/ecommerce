@@ -1,37 +1,20 @@
-import Header from "./components/Header";
-import React, { useState } from "react";
-import Title from "./components/Title";
-import Product from "./components/Products";
-import Footer from "./components/Footer";
-import Cart from "./components/Cart";
-import CartProvider from "./store/CartProvider";
+
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import AboutUs from "./components/AboutUs";
 
 
 
 function App() {
 
-  const [isCartShown,setIsCartShown]=useState(false)
-
-  const handleOnClick=()=>{
-    setIsCartShown(true)
-  }
-  const handleOnClose=()=>{
-    setIsCartShown(false)
-  }
+  const router=createBrowserRouter([
+    {path:'/',element: <HomePage />},
+    {path:'/about', element: <AboutUs/>}
+  ])
 
 
-  return ( <CartProvider>
-    {isCartShown && <Cart onClose={handleOnClose}/>}
-  <Header onClick={handleOnClick}/>
-  <Title/>
-  <Product onClick={handleOnClick}/>
-  <Footer />
-  
-  </CartProvider>
-  
-      
-    
-    
+  return ( <RouterProvider router={router} />
   );
 }
 
