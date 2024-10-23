@@ -1,0 +1,9 @@
+.nav{
+    text-decoration: none;
+    margin-right: 10px;
+    color: palegoldenrod;
+}
+.nav:hover,
+.nav:active{
+    text-decoration: underline;
+}

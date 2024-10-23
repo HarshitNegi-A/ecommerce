@@ -1,0 +1,21 @@
+.main{
+    border:1px solid black;
+    height: 700px;
+}
+.main h2{
+    margin: 50px;
+}
+.list li{
+    display: flex;
+    justify-content: center;
+    
+}
+.list li div{
+    margin-right: 50px;
+}
+.button{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(103, 209, 209);
+}

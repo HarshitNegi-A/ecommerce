@@ -1,12 +1,12 @@
 import CartProvider from "../store/CartProvider";
 import Footer from "./Footer";
-import Header from "./Header";
 import classes from "./AboutUs.module.css"
 import Title from "./Title";
+import CommonHeader from "./CommonHeader";
 
 const AboutUs=()=>{
     return <CartProvider>
-        <Header/>
+        <CommonHeader/>
         <Title/>
         <div className={classes.main}>
             Hello There

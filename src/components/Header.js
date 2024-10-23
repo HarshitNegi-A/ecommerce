@@ -1,8 +1,9 @@
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import CartContext from "../store/cart-context";
 import { useContext } from "react";
 import {NavLink} from "react-router-dom";
 import classes from "./Header.module.css"
+import CartButton from "./CartButton";
 
 const Header=(props)=>{
 
@@ -14,12 +15,12 @@ const Header=(props)=>{
         <Container>
             <Nav className="me-auto">
             <NavLink className={classes.nav} to="/">HOME</NavLink>
-            <NavLink className={classes.nav} to="/">STORE</NavLink>
+            <NavLink className={classes.nav} to="/store">STORE</NavLink>
             <NavLink style={({isActive})=>({
                 textDecoration:isActive?'underline':undefined
             })} className={classes.nav}  to="/about" end >ABOUT</NavLink>
             </Nav>
-            <Button onClick={props.onClick}>Cart {cartctnx.count}</Button>
+            <CartButton onClick={props.onClick}/>
         </Container>
     </Navbar>
 }
