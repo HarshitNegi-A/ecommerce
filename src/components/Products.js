@@ -87,7 +87,7 @@ const productsArr = [
 
     
 
-const Product=()=>{
+const Product=(props)=>{
     const products=(
         <div className={classes.main}>
             <h2>Main</h2>
@@ -98,7 +98,7 @@ const Product=()=>{
                 
             ))}
         </ul>
-        <button >See the cart</button>
+        <button onClick={props.onClick}>See the cart</button>
         </div>
     )
     return <React.Fragment>
