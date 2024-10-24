@@ -14,11 +14,18 @@ const Header=(props)=>{
     return <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
         <Container>
             <Nav className="me-auto">
-            <NavLink className={classes.nav} to="/">HOME</NavLink>
-            <NavLink className={classes.nav} to="/store">STORE</NavLink>
             <NavLink style={({isActive})=>({
                 textDecoration:isActive?'underline':undefined
-            })} className={classes.nav}  to="/about" end >ABOUT</NavLink>
+            })} className={classes.nav} to="/" end>HOME</NavLink>
+            <NavLink style={({isActive})=>({
+                textDecoration:isActive?'underline':undefined
+            })} className={classes.nav} to="/store">STORE</NavLink>
+            <NavLink style={({isActive})=>({
+                textDecoration:isActive?'underline':undefined
+            })} className={classes.nav}  to="/about"  >ABOUT</NavLink>
+            <NavLink style={({isActive})=>({
+                textDecoration:isActive?'underline':undefined
+            })} className={classes.nav}  to="/about"  >Contact Us</NavLink>
             </Nav>
             <CartButton onClick={props.onClick}/>
         </Container>
