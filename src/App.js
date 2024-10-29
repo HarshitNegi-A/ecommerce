@@ -5,6 +5,7 @@ import AboutUs from "./components/AboutUs";
 import Home from "./components/Home";
 import ContactUs from "./components/ContactUs";
 import ProductDetail from "./components/ProductDetail";
+import LoginForm from "./components/LoginForm";
 
 
 
@@ -16,6 +17,7 @@ function App() {
     {path:'/about', element: <AboutUs/>},
     {path:'/', element: <Home/>},
     {path:'/contact', element: <ContactUs/>},
+    {path:'/login', element: <LoginForm/>},
   ])
 
 

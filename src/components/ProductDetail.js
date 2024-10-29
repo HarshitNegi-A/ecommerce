@@ -6,6 +6,7 @@ const ProductDetail=()=>{
     return <>
         <Header/>
         <h1>Product detail</h1>
+        <h1>Hello</h1>
     </>
 }
 export default ProductDetail;

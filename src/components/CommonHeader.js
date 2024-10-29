@@ -12,6 +12,7 @@ const CommonHeader=()=>{
             <NavLink  className={classes.nav} to="/">HOME</NavLink>
             <NavLink  className={classes.nav} to="/store">STORE</NavLink>
             <NavLink  className={classes.nav}  to="/about"  >ABOUT</NavLink>
+            <NavLink  className={classes.nav}  to="/login"  >LOGIN</NavLink>
             <NavLink  className={classes.nav}  to="/contact"  >Contact Us</NavLink>
             </Nav>
         </Container>
