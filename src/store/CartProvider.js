@@ -3,7 +3,7 @@ import CartContext from "./cart-context"
 
 
 const CartProvider=(props)=>{
-    
+
 
     const [items,setItems]=useState([])
     const [count,setCount]=useState(0)
@@ -13,7 +13,7 @@ const CartProvider=(props)=>{
     }
 
     const handleAddItem=(item)=>{
-        setItems([...items,item])
+        setItems(prevItems=>[...prevItems,item])
     }
 
     const cartContext={

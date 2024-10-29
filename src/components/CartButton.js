@@ -33,7 +33,7 @@ const CartButton=(props)=>{
         props.onClick();
         getCartItems();
     }
-    return <Button onClick={handleClick} >Cart {cartctnx.count}</Button>
+    return <Button onClick={handleClick} >Cart </Button>
 }
 
 export default CartButton;
