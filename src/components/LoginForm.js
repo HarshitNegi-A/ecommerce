@@ -14,12 +14,12 @@ const LoginForm=()=>{
   const [isLoading,setIsLoading]=useState(false)
   const history=useNavigate();
   const authCtx=useContext(LoginContext)
-
   const handleFormSubmit=(e)=>{
     e.preventDefault();
     
     const enteredEmail=emailInputRef.current.value
     const enteredPassword=passwordInputRef.current.value
+    console.log(authCtx)
 
     setIsLoading(true)
     let url='https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAc1hoElOXf55Mb8l-jZ0GVGHn5SWBcndc'
@@ -53,7 +53,10 @@ const LoginForm=()=>{
     .catch((err)=>{
       alert(err.message)
     })
-    console.log(authCtx)
+    console.log(enteredEmail)
+    authCtx.addEmail(enteredEmail);
+   
+    
 
   }
 

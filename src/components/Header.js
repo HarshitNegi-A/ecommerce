@@ -1,14 +1,16 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-import CartContext from "../store/cart-context";
 import { useContext } from "react";
 import classes from "./Header.module.css"
 import CartButton from "./CartButton";
 import { NavLink } from "react-router-dom";
+import LoginContext from "../store/token-context";
 
 const Header=(props)=>{
 
-    const cartctnx=useContext(CartContext);
-    console.log(cartctnx)
+    const authCtx=useContext(LoginContext)
+    const handleOnClick=()=>{
+        authCtx.logout();
+    }
 
     
     return <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
@@ -22,6 +24,7 @@ const Header=(props)=>{
             
             </Nav>
             <CartButton onClick={props.onClick}/>
+            {authCtx.isLoggedIn && <NavLink  className={classes.nav} onClick={handleOnClick}>LOGOUT</NavLink>}
         </Container>
     </Navbar>
 }

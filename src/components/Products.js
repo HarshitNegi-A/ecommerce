@@ -3,6 +3,9 @@ import classes from "./Products.module.css";
 import CartContext from "../store/cart-context";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import LoginContext from "../store/token-context";
+
 
 const productsArr = [
   {
@@ -87,6 +90,11 @@ const productsArr = [
 
 const Product = (props) => {
   const cartcntx = useContext(CartContext);
+  const authCtx=useContext(LoginContext)
+  let sanitizedEmail;
+    if(authCtx.email){
+        sanitizedEmail = authCtx.email.replace(/[@.]/g, '');
+    }
 
   const handleOnClick = (item) => {
     let count = 0;
@@ -103,6 +111,19 @@ const Product = (props) => {
       item.quantity++;
     }
     cartcntx.addCount();
+
+axios.post(
+  `https://crudcrud.com/api/fe8b026682e7453ab629d3a4e35ca16b/items`, 
+  { ...item, email: sanitizedEmail }, 
+  { headers: { 'Content-Type': 'application/json' } }
+)
+.then((res) => {
+  console.log('Item saved:', res);
+})
+.catch((err) => {
+  console.error('Error posting data:', err);
+});
+    
   };
 
   const products = (
