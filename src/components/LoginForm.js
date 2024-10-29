@@ -3,6 +3,7 @@ import classes from "./LoginForm.module.css"
 import { useContext } from "react";
 import LoginContext from "../store/token-context";
 import { useNavigate } from "react-router";
+import CommonHeader from "./CommonHeader";
 
 
 
@@ -52,10 +53,12 @@ const LoginForm=()=>{
     .catch((err)=>{
       alert(err.message)
     })
+    console.log(authCtx)
 
   }
 
-    return (
+    return ( <>
+        <CommonHeader/>
         <section className={classes.auth}>
           <h1>Login</h1>
           <form onSubmit={handleFormSubmit}>
@@ -81,6 +84,7 @@ const LoginForm=()=>{
             </div>
           </form>
         </section>
+        </>
       );
 }
 
